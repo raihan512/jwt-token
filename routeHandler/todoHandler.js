@@ -8,7 +8,7 @@ const Todo = new mongoose.model("Todo", todoSchema);
 router.get("/", async (req, res) => {
   Todo.find({ status: "inactive" })
     .select({
-      // _id: 0,
+      _id: 0,
       __v: 0,
       date: 0,
     })
